@@ -1,0 +1,27 @@
+/**
+ * @name 		Lines overlay
+ * Apply a nice lines overlay
+ * @styleguide 		Decorators / Overlays
+ * @example 	html
+ * <div class="overlay-lines ratio-16-9 bkg-secondary"></div>
+ */
+.overlay-lines {
+	position:relative;
+
+	&:after {
+		pointer-events:none;
+		content:'';
+		position:absolute;
+		top:0; left:0;
+		width:100%; height:100%;
+		background-image:url('data:image/svg+xml;utf8,<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 236.4 236.4">
+		  <style>
+		    .st0{fill:none;stroke:#{s-color(#e2dcd4, -opacity .2)};stroke-width:.5px;}
+		  </style>
+		  <path class="st0" d="M118.196-.30992l118.50996 118.50996L118.196 236.71-.31396 118.20004z"/>
+		</svg>');
+		background-repeat: repeat;
+		background-size: 30vw;
+		background-position: 50% 50%;
+	}
+}

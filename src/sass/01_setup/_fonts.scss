@@ -1,0 +1,24 @@
+@include s-setup((
+	fonts : (
+		gt-walsheim-bold : (
+			src : '../fonts/gt-walsheim-bold/gt-walsheim-bold.woff',
+			extensions : woff woff2
+		),
+		gt-walsheim-light : (
+			src : '../fonts/gt-walsheim-light/gt-walsheim-light.woff',
+			extensions : woff woff2
+		),
+		gt-walsheim-medium : (
+			src : '../fonts/gt-walsheim-medium/gt-walsheim-medium.woff',
+			extensions : woff woff2
+		),
+		gt-walsheim-ultra-light : (
+			src : '../fonts/gt-walsheim-ultra-light/gt-walsheim-ultra-light.woff',
+			extensions : woff woff2
+		),
+		gt-walsheim-regular : (
+			src : '../fonts/gt-walsheim-regular/gt-walsheim-regular.woff',
+			extensions : woff woff2
+		)
+	)
+));

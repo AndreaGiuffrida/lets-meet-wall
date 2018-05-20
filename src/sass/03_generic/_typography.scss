@@ -1,0 +1,96 @@
+/**
+ * Titles
+ */
+@include s-typography-title-classes-bare();
+.h1, .#{s-text-format-class()} h1,
+.h2, .#{s-text-format-class()} h2,
+.h3, .#{s-text-format-class()} h3,
+.h4, .#{s-text-format-class()} h4,
+.h5, .#{s-text-format-class()} h5,
+.h6, .#{s-text-format-class()} h6 {
+	@include s-font(gt-walsheim-bold);
+	line-height:1;
+}
+.h1, .#{s-text-format-class()} h1 {
+	font-size: s-em(20px);
+	position: relative;
+
+	@include g-state(tablet) {
+		font-size: 5vw;
+	}
+	@include g-state(desktop-large) {
+		font-size: s-em(80px);
+	}
+
+	&.h1--prefix {
+		&:before {
+			content:'';
+			display:block;
+			position:absolute;
+			top:0; left:0;
+			width:.5em; height:1em;
+			background: currentColor;
+			transform: translateX(calc(-100% - 40px));
+		}
+	}
+}
+.h2, .#{s-text-format-class()} h2 {
+	font-size: s-em(64px);
+}
+.h3, .#{s-text-format-class()} h3 {
+	font-size: s-em(36px);
+}
+.h4, .#{s-text-format-class()} h4 {
+	font-size: s-em(22px);
+}
+.h5, .#{s-text-format-class()} h5 {
+	font-size: s-em(14px);
+}
+.h6, .#{s-text-format-class()} h6 {
+	font-size: s-em(10px);
+}
+
+/**
+ * @name 		Paragraphs
+ * Display a standard paragraph
+ * @styleguide 		Typography / Paragraphs
+ * @example 		html
+ * <p class="p">
+ * 	Suspendisse potenti. Etiam auctor lacus id consectetur bibendum. Pellentesque vel ex eget tortor rhoncus ultricies nec vitae neque. Nam consectetur metus ut ligula porttitor euismod. Nunc diam urna, porta sed.
+ * </p>
+ * <div class="#{s-text-format-class()}">
+ * 	<p>
+ * 		Suspendisse potenti. Etiam auctor lacus id consectetur bibendum. Pellentesque vel ex eget tortor rhoncus ultricies nec vitae neque. Nam consectetur metus ut ligula porttitor euismod. Nunc diam urna, porta sed.
+ * 	</p>
+ * </div>
+ */
+.p, .#{s-text-format-class()} p {
+	font-size: s-em(14px);
+	line-height: 1.5;
+
+	@include g-state(tablet) {
+		font-size: s-em(18px);
+	}
+}
+
+/**
+ * @name 		Lead Paragraph
+ * Display a lead paragraph
+ * @styleguide 		Typography / Paragraphs
+ * @example 		html
+ * <p class="p p--lead">
+ * 	Suspendisse potenti. Etiam auctor lacus id consectetur bibendum. Pellentesque vel ex eget tortor rhoncus ultricies nec vitae neque. Nam consectetur metus ut ligula porttitor euismod. Nunc diam urna, porta sed.
+ * </p>
+ * <div class="#{s-text-format-class()}">
+ * 	<p class="p--lead">
+ * 		Suspendisse potenti. Etiam auctor lacus id consectetur bibendum. Pellentesque vel ex eget tortor rhoncus ultricies nec vitae neque. Nam consectetur metus ut ligula porttitor euismod. Nunc diam urna, porta sed.
+ * 	</p>
+ * </div>
+ */
+.p--lead, .#{s-text-format-class()} .p--lead {
+	font-size: s-em(20px);
+
+	@include g-state(tablet) {
+		font-size: s-em(28px);
+	}
+}

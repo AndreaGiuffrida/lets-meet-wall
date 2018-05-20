@@ -1,0 +1,29 @@
+// classes
+@include g-classes();
+
+// container
+.container {
+	max-width:1280px;
+	margin:0 auto;
+	padding:0 s-rem(80px);
+}
+	.container--wide {
+		max-width:100%;
+	}
+
+@include g-state(tablet) {
+	.container {
+		padding: 0 s-rem(40px);
+	}
+}
+
+@include g-state(mobile) {
+	.container {
+		padding:0 s-rem(20px);
+	}
+	[class*="gr-"] {
+		&:not([class*="gr-1\@mobile"]):not([class*="gr-2\@mobile"]):not([class*="gr-3\@mobile"]):not([class*="gr-4\@mobile"]):not([class*="gr-5\@mobile"]):not([class*="gr-6\@mobile"]):not([class*="gr-7\@mobile"]):not([class*="gr-8\@mobile"]):not([class*="gr-9\@mobile"]):not([class*="gr-10\@mobile"]):not([class*="gr-10\@mobile"]):not([class*="gr-11\@mobile"]):not([class*="gr-12\@mobile"]) {
+			@include gridle(12 prefix 0);
+		}
+	}
+}

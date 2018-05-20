@@ -1,0 +1,12 @@
+/**
+ * Contextual alignement from gridle states
+ */
+@include g-custom-class(('t','-','left','@','%state')) {
+	text-align: left;
+}
+@include g-custom-class(('t','-','right','@','%state')) {
+	text-align: right;
+}
+@include g-custom-class(('t','-','center','@','%state')) {
+	text-align: center;
+}

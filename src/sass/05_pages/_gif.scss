@@ -1,0 +1,16 @@
+.gif {
+	// top:50% !important;
+
+	@include g-state(tablet) {
+		top:55% !important;
+	}
+
+	img {
+		max-height: s-rem(250px);
+		width:auto;
+
+		@include g-state(tablet) {
+			max-height: s-rem(350px);
+		}
+	}
+}

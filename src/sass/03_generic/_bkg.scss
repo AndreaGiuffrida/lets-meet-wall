@@ -1,0 +1,13 @@
+/**
+ * @name 		Wild background
+ * Apply a nice wild background
+ * @styleguide 		Decorators / Backgrounds
+ * @example 	html
+ * <div class="bkg-wild ratio-16-9"></div>
+ */
+.bkg-wild {
+	background-image: url('../img/wild-bkg.jpg');
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: top 50%;
+}

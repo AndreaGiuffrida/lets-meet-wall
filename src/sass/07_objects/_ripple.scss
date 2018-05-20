@@ -1,0 +1,35 @@
+/**
+ * @name 	Plyr ripple
+ * Display a cool ripple effect for the plyr play button
+ * @styleguide 		Objects / Ripples
+ * @example 	html
+ * <div class="ratio-16-9 bkg-secondary">
+ * 	<s-ripple class="ripple--plyr" contains="false"></s-ripple>
+ * </div>
+ */
+@keyframes s-ripple-plyr {
+	0% {
+		// opacity:1;
+		border-width:0;
+		transform:translateX(-50%) translateY(-50%) scale(0,0) rotate(45deg);
+	}
+	50% {
+		border-width:50px;
+	}
+	100% {
+		// opacity:0;
+		border-width:0;
+		transform:translateX(-50%) translateY(-50%) scale(1,1) rotate(45deg);
+	}
+}
+s-ripple.ripple--plyr {
+	.s-ripple__particle {
+		width:s-rem(200px); height:s-rem(200px);
+		@include s-animation(s-ripple-plyr .3s ease-out);
+		opacity: 1 !important;
+		background: transparent;
+		border: 20px solid s-color(white);
+		border-radius:0;
+		transform:rotate(45deg) translateX(-50%) translateY(-50%) !important;
+	}
+}

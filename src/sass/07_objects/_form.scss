@@ -1,0 +1,9 @@
+@include s-form-classes();
+
+.form-input {
+	font-size: s-rem(18px);
+
+	@include s-placeholder() {
+		color : s-color(default);
+	}
+}

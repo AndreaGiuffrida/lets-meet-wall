@@ -1,0 +1,94 @@
+/**
+ * @name 		Simple button
+ * Display a simple button
+ * @styleguide 		Objects / Buttons
+ * @example 		html
+ * <a class="btn" href="#">
+ * 	I'm a cool button
+ * </a>
+ */
+.btn {
+	color : s-color(link);
+	font-size : s-rem(18px);
+	display: inline-block;
+	text-decoration: none;
+	position:relative;
+	padding: s-lnf(padding-horizontal) s-lnf(padding-vertical);
+	background:none;
+	border:none;
+	cursor: pointer;
+	user-select:none;
+	outline:none;
+	@include s-transition(default);
+
+	&[disabled] {
+		opacity: .2;
+		pointer-events: none;
+	}
+
+	&:before {
+		content:'';
+		display:block;
+		border: 1px solid s-color(link);
+		border-right:0;
+		position:absolute;
+		left:0;
+		right:0;
+		top:0; bottom:0;
+		// z-index:-1;
+		transform:scale(0,1);
+		transform-origin: 0 0;
+		@include s-transition(all .3s cubic-bezier(0.855, 0, 0.045, 1) 0s);
+	}
+	&:hover:before {
+		transform:scale(1,1);
+	}
+
+	&:after {
+		display:none;
+		content:'';
+		background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 57.06 7.35'><polygon fill='#{_replace(s-color(link),'#','%23')}' points='53.38 0 52.54 0.85 54.76 3.08 0 3.08 0 4.28 54.76 4.28 52.54 6.5 53.38 7.35 57.06 3.68 53.38 0'/></svg>");
+		background-repeat: repeat-x;
+		background-position:top right;
+		background-size:s-rem(57px) s-rem(8px);
+		width: s-rem(57px); height: s-rem(8px);
+		position:relative;
+		margin-left: s-rem(10px);
+		top: s-rem(-2px);
+		@include s-transition(default);
+	}
+
+	&:hover {
+		padding: s-lng(padding-horizontal) s-lnf(padding-vertical) / 2;
+
+		&:before {
+			border-right:1px solid s-color(link);
+			@include s-transition(all .3s cubic-bezier(0.855, 0, 0.045, 1) 0s, border-right .3s ease-in-out .3s);
+
+		}
+		&:after {
+			width: s-rem(10px);
+		}
+	}
+
+	@include g-state(tablet) {
+		&:after {
+			display: inline-block;
+		}
+	}
+}
+
+.btn-facebook {
+	background-color: s-color(facebook);
+	color: white;
+	padding: s-lnf(padding-horizontal) s-lnf(padding-vertical);
+	text-decoration: none;
+	font-size:s-rem(18px);
+	display: inline-block;
+	outline:none;
+	transition: background-color .1s ease-in-out 0s;
+
+	&:hover {
+		background-color: s-color(facebook, -darken 10%);
+	}
+}

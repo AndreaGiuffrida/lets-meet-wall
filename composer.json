@@ -1,0 +1,16 @@
+{
+  "name": "coffeekraken/html-boilerplate",
+  "version": "1.0.0",
+  "description": "Base HTML files and folder structure with complete build process (js, sass, image compression, etc...) built in",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Olivier Bossel",
+      "email": "olivier.bossel@gmail.com"
+    }
+  ],
+  "require": {
+    "dwarvesforge/thorin" : "^1.0.0",
+    "fzaninotto/faker": "^1.7"
+  }
+}

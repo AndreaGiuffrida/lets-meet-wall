@@ -1,0 +1,25 @@
+@include s-setup((
+	colors : (
+		default : (
+			color : #f7f0e7
+		),
+		primary : (
+			color : #f63e3e
+		),
+		secondary : (
+			color : #000
+		),
+		title : (
+			color : #363636
+		),
+		text : (
+			color : #282828
+		),
+		link : (
+			color : #a48135
+		),
+		facebook : (
+			color : #3B5998
+		)
+	)
+));

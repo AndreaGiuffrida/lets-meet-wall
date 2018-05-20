@@ -1,0 +1,14 @@
+CACHE MANIFEST
+# v1 - 2011-08-13
+# This is a comment.
+videos/transition-3.mp4
+videos/transition-2.mp4
+videos/transition-1.mp4
+mosaic_anim.json
+index.html
+dist/css/style.css
+dist/js/app.js
+
+# Resources that require the user to be online.
+NETWORK:
+*

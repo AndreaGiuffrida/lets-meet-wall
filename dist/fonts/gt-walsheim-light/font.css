@@ -1,0 +1,7 @@
+@font-face {
+	font-family: 'gt-walsheim-bold';
+    src: url('gt-walsheim-bold.woff2') format('woff2'),
+  	   url('gt-walsheim-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

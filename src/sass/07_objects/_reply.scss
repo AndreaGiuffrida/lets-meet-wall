@@ -1,0 +1,17 @@
+.reply {
+	padding: s-space(default);
+	color: white;
+	margin-top: s-space(default);
+	border-radius: s-rem(2px);
+}
+@include s-context((
+	colors : (
+		error : #FF2D2D
+	)
+)) {
+	@each $colorName, $color in s-setting('colors') {
+		.reply--#{$colorName} {
+			background-color : s-color($colorName);
+		}
+	}
+}
